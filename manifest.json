@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Compare",
+  "version": "1.0",
+  "description": "Instant, secure character-by-character text and hash comparator.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "image-simple-compare.png",
+    "default_title": "Open Simple Compare"
+  },
+  "icons": {
+    "48": "image-simple-compare.png",
+    "128": "image-simple-compare.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "simple-compare@appsec.local"
+    }
+  }
+}
