@@ -1,21 +1,30 @@
 {
   "manifest_version": 3,
   "name": "Simple Compare",
-  "version": "1.0",
-  "description": "Instant, secure character-by-character text and hash comparator.",
+  "version": "1.0.0",
+  "description": "Instant character-by-character text and hash comparator.",
+  "minimum_chrome_version": "102",
   "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "image-simple-compare.png",
-    "default_title": "Open Simple Compare"
+    "default_title": "Open Simple Compare",
+    "default_icon": { 
+      "16": "icons/icon-16.png", 
+      "32": "icons/icon-32.png" 
+    }
   },
   "icons": {
-    "48": "image-simple-compare.png",
-    "128": "image-simple-compare.png"
+    "16": "icons/icon-16.png", 
+    "32": "icons/icon-32.png", 
+    "48": "icons/icon-48.png", 
+    "64": "icons/icon-64.png", 
+    "128": "icons/icon-128.png"
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "simple-compare@appsec.local"
+      "id": "simple-compare@d-lukyan",
+      "strict_min_version": "120.0",
+      "data_collection_permissions": { "required": ["none"] }
     }
   }
 }
