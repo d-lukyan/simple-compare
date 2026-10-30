@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../fonts/FiraCode-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 720px;
+  min-height: 400px;
+  padding: 32px 40px;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #111;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.input::placeholder {
+  color: #a3a3a3;
+}
+
+.input:focus {
+  outline: none;
+  background: #fff;
+  border-color: #111;
+}
+
+#clear {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  background: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+#clear:hover {
+  color: #111;
+  border-color: #111;
+  background: #fafafa;
+}
+
+/* Results */
+#result-length {
+  font-size: 13px;
+  color: #525252;
+  line-height: 1.8;
+}
+
+#result-character {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 2;
+  color: #1a1a1a;
+  padding: 16px;
+  background: #fafafa;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* Match / mismatch */
+.match {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.mismatch {
+  color: #dc2626;
+}
+
+.char-error {
+  color: #dc2626;
+  background: #fef2f2;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 1px 3px;
+}
+
+.len-match {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.len-mismatch {
+  color: #d97706;
+  font-weight: 600;
+}
+
+/* Complete match */
+#result-character.match {
+  text-align: center;
+  font-size: 15px;
+  color: #16a34a;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+/* Empty hint */
+.empty-hint {
+  text-align: center;
+  color: #a3a3a3;
+  font-size: 13px;
+}
+
+/* Scrollbar */
+#result-character::-webkit-scrollbar {
+  height: 4px;
+}
+
+#result-character::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#result-character::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 2px;
+}
+
+#result-character {
+  white-space: pre;
+}
+.diff-details {
+  font-size: 12px; color: #525252; line-height: 1.6;
+}
